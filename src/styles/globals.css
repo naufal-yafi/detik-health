@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-shadow {
+  --shadow-color: rgba(255, 199, 60, 0.55);
+  --shadow-x: 0;
+  --shadow-y: 18px;
+  --shadow-blur: 40px;
+  --shadow-spread: 12px;
+  --bg-color: #ffc73c;
+
+  background-color: var(--bg-color);
+  box-shadow: var(--shadow-x) var(--shadow-y) var(--shadow-blur)
+    var(--shadow-spread) var(--shadow-color);
+}
+
+@layer components {
+  .flex__center {
+    @apply flex justify-center items-center;
+  }
+
+  .btn {
+    @apply px-6 py-2 font-bold text-[16px] rounded-full text-white;
+  }
+
+  .btn.primary {
+    @apply custom-shadow;
+  }
+
+  .btn.gradient {
+    @apply bg-gradient-to-r from-[#326CFF] to-[#59FFB9];
+  }
+}
