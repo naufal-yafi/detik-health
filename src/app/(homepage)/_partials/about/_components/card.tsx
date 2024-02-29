@@ -14,7 +14,7 @@ const Figure = ({
 }) => {
   return (
     <React.Fragment>
-      <figure className={isHorizontal ? "grid grid-cols-2" : ""}>
+      <figure className={isHorizontal ? "grid grid-cols-2 break-words" : ""}>
         <Image
           src={image}
           alt={title}
