@@ -20,6 +20,10 @@
     @apply flex justify-center items-center;
   }
 
+  .bg__gradient {
+    @apply bg-gradient-to-r from-[#326CFF] to-[#59FFB9];
+  }
+
   .btn {
     @apply px-6 py-2 font-bold text-[16px] rounded-full text-white;
   }
@@ -29,6 +33,14 @@
   }
 
   .btn.gradient {
-    @apply bg-gradient-to-r from-[#326CFF] to-[#59FFB9];
+    @apply bg__gradient;
+  }
+
+  .card__title {
+    @apply text-5xl font-black italic text-white;
+  }
+
+  .card__desc {
+    @apply text-base font-semibold text-white mt-3;
   }
 }
