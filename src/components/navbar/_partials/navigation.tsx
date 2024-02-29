@@ -26,30 +26,28 @@ export default function Navigation() {
         } transition duration-500 md:translate-x-0`}
       >
         <li className="font-bold">
-          <Link href="/">
-            <button data-test="menu">Home</button>
+          <Link href="/" data-test="menu-1">
+            <button>Home</button>
           </Link>
         </li>
         <li className="font-bold">
-          <Link href="/#about">
-            <button data-test="menu">Tentang</button>
+          <Link href="/#about" data-test="menu-2">
+            <button>Tentang</button>
           </Link>
         </li>
         <li className="font-bold">
-          <Link href="/#gallery">
-            <button data-test="menu">Galeri</button>
+          <Link href="/#gallery" data-test="menu-3">
+            <button>Galeri</button>
           </Link>
         </li>
         <li className="font-bold">
-          <Link href="/#news">
-            <button data-test="menu">Berita</button>
+          <Link href="/#news" data-test="menu-4">
+            <button>Berita</button>
           </Link>
         </li>
         <li>
-          <Link href="https://event.detik.com">
-            <button data-test="menu" className="btn gradient">
-              Registrasi
-            </button>
+          <Link href="https://event.detik.com" data-test="menu-5">
+            <button className="btn gradient">Registrasi</button>
           </Link>
         </li>
       </ul>

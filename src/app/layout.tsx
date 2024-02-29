@@ -31,7 +31,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
-      <body className={`${montserrat.className} overflow-x-hidden`}>
+      <body
+        className={`${montserrat.className} overflow-x-hidden scroll-smooth`}
+      >
         <Navbar />
         {children}
       </body>
