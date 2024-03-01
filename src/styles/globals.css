@@ -36,6 +36,10 @@
     @apply bg__gradient;
   }
 
+  .btn.active {
+    @apply bg-white/50 border border-white;
+  }
+
   .card__title {
     @apply text-5xl font-black italic text-white;
   }
@@ -45,6 +49,6 @@
   }
 
   .title__section {
-    @apply text-4xl font-black text-center;
+    @apply text-2xl md:text-4xl font-black text-center;
   }
 }

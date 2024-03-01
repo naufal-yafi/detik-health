@@ -2,6 +2,7 @@ import About from "./_partials/about/about";
 import Article from "./_partials/article/article";
 import Gallery from "./_partials/gallery/gallery";
 import Hero from "./_partials/hero/hero";
+import News from "./_partials/news/news";
 import Sponsor from "./_partials/sponsor/sponsor";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <Sponsor />
       <Gallery />
       <Article />
+      <News />
     </main>
   );
 }

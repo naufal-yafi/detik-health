@@ -20,7 +20,7 @@ export default function Gallery() {
           <Image
             src={imageShow}
             alt="preview image"
-            className="rounded-[32px] transition duration-500 aspect-video"
+            className="rounded-[8px] md:rounded-[32px] transition duration-500 aspect-video"
             quality={100}
             priority
           />
@@ -31,6 +31,7 @@ export default function Gallery() {
                 alt="arrow left icon"
                 width={50}
                 height={50}
+                className="w-8 md:w-12"
               />
             </button>
             <button onClick={forward}>
@@ -39,20 +40,20 @@ export default function Gallery() {
                 alt="arrow right icon"
                 width={50}
                 height={50}
-                className="rotate-180"
+                className="w-8 md:w-12 rotate-180"
               />
             </button>
           </div>
         </figure>
 
-        <figure className="grid grid-cols-4 gap-4 mt-4">
+        <figure className="grid grid-cols-4 gap-2 md:gap-4 mt-2 md:mt-4">
           {GalleryData.map((gallery: GalleryType) => (
             <button key={gallery.id} onClick={() => handleId(gallery.id)}>
               <Image
                 src={gallery.image}
                 alt={`gallery image ${gallery.id}`}
                 loading="lazy"
-                className={`aspect-video rounded-[16px] transition duration-500 ${
+                className={`aspect-video rounded-[8px] md:rounded-[16px] transition duration-500 ${
                   id !== gallery.id ? "saturate-0" : ""
                 }`}
               />
