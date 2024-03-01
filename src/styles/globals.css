@@ -43,4 +43,8 @@
   .card__desc {
     @apply text-base font-semibold text-white mt-3;
   }
+
+  .title__section {
+    @apply text-4xl font-black text-center;
+  }
 }

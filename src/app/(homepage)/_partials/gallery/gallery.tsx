@@ -11,7 +11,7 @@ export default function Gallery() {
 
   return (
     <section className="pt-28 px-6 md:px-32">
-      <h1 data-test="title-gallery" className="text-4xl font-black text-center">
+      <h1 data-test="title-gallery" className="title__section">
         GALERI SUDIRMAN RUN 2022
       </h1>
 

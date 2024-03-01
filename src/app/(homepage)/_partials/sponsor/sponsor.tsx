@@ -47,7 +47,9 @@ const sponsors = [
 export default function Sponsor() {
   return (
     <section className="py-16 bg__gradient flex__center flex-col">
-      <h1 className="font-black text-4xl text-white">DIDUKUNG OLEH</h1>
+      <h1 data-test="title-sponsor" className="font-black text-4xl text-white">
+        DIDUKUNG OLEH
+      </h1>
 
       <Marquee className="mt-8">
         {sponsors.map((sponsor) => (
