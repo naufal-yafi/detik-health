@@ -1,6 +1,3 @@
-import contents from "@/app/(homepage)/_partials/about/_data/about.data";
-import ContentType from "@/app/(homepage)/_partials/about/_type/about.type";
-
 describe("Homepage", () => {
   beforeEach(() => {
     cy.visit("http://localhost:3000");
@@ -13,8 +10,30 @@ describe("Homepage", () => {
   });
 
   context("About", () => {
+    const contents = [
+      {
+        title: "10K FUN RUN",
+        description:
+          "Dimulai pukul 6 pagi, nikmati pemandangan kota di pagi hari dimulai dari Bundaran HI hingga Patung Pemuda Membangun di Senayan lalu kembali lagi ke Bundaran HI!",
+      },
+      {
+        title: "GRATIS DAN BERHADIAH",
+        description:
+          "Pendaftaran gratis! Ajak keluarga anda dan menangkan hadiah total puluhan juta rupiah doorprize menarik!",
+      },
+      {
+        title: "50+ TENANT BAZZAR",
+        description:
+          "Dapatkan promo menarik pada booth-booth tenant bazzar Sudirman Run 2023 mulai dari F&B hingga fashion",
+      },
+      {
+        title: "SPECIAL PERFORMANCE",
+        description:
+          "Saksikan penampilan dari RAN, Ayu Ting Ting, Diskoria, serta hiburan lainnya!",
+      },
+    ];
     it("Content", () => {
-      contents.map((content: ContentType, index: number) => {
+      contents.map((content, index: number) => {
         cy.getByData("card-title").eq(index).contains(content.title);
         cy.getByData("card-description")
           .eq(index)
