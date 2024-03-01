@@ -14,7 +14,13 @@ const Figure = ({
 }) => {
   return (
     <React.Fragment>
-      <figure className={isHorizontal ? "grid grid-cols-2 break-words" : ""}>
+      <figure
+        className={
+          isHorizontal
+            ? "md:grid md:grid-cols-2 space-y-4 md:space-y-0 break-words"
+            : ""
+        }
+      >
         <Image
           src={image}
           alt={title}
@@ -49,7 +55,7 @@ export default function Card({
   isHorizontal?: boolean;
 }) {
   return (
-    <div className="px-6 py-6 bg__gradient rounded-[30px]">
+    <div className="px-6 py-6 bg__gradient rounded-[30px] break-words">
       {image ? (
         <Figure
           image={image}
