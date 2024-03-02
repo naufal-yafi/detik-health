@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Card from "./_components/card";
+import contents from "./_data/about.data";
 import map from "./_images/maps.png";
-import people from "./_images/people.png";
+import ContentType from "./_type/about.type";
 
 export default function About() {
   return (
@@ -17,25 +18,20 @@ export default function About() {
         />
 
         <div className="space-y-6">
-          <Card
-            title="GRATIS DAN BERHADIAH"
-            description="Pendaftaran gratis! Ajak keluarga anda dan menangkan hadiah total puluhan juta rupiah doorprize menarik!"
-          />
-          <Card
-            title="50+ TENANT BAZZAR"
-            description="Dapatkan promo menarik pada booth-booth tenant bazzar Sudirman Run 2023 mulai dari F&B hingga fashion"
-          />
-          <Card
-            image={people}
-            isHorizontal={true}
-            title="SPECIAL PERFORMANCE"
-            description="Saksikan penampilan dari RAN, Ayu Ting Ting, Diskoria, serta hiburan lainnya!"
-          />
+          {contents.map((content: ContentType, i: number) => (
+            <Card
+              key={i}
+              image={content.image}
+              title={content.title}
+              isHorizontal={content.isHorizontal}
+              description={content.description}
+            />
+          ))}
         </div>
       </div>
 
       <div>
-        <Link href="https://event.detik.com">
+        <Link href="https://event.detik.com" data-test="btn-about">
           <button className="btn primary">Daftar Sekarang</button>
         </Link>
       </div>

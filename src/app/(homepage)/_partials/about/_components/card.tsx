@@ -51,7 +51,7 @@ export default function Card({
 }: {
   title: string;
   description: string;
-  image?: string | StaticImageData;
+  image?: null | string | StaticImageData;
   isHorizontal?: boolean;
 }) {
   return (
