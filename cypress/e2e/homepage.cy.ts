@@ -39,6 +39,13 @@ describe("Homepage", () => {
           .eq(index)
           .contains(content.description);
       });
+
+      cy.getByData("btn-about").contains("Daftar Sekarang");
+      cy.getByData("btn-about").should(
+        "have.attr",
+        "href",
+        "https://event.detik.com",
+      );
     });
   });
 
@@ -54,7 +61,14 @@ describe("Homepage", () => {
     });
   });
 
-  context("Berita", () => {
-    it("Content", () => {});
+  it("CTA", () => {
+    cy.getByData("btn-cta").contains("Lihat Lebih Banyak");
+    cy.getByData("btn-cta").should(
+      "have.attr",
+      "href",
+      "https://www.detik.com/search/searchall?query=fun+run&siteid=2",
+    );
   });
+
+  it("Footer", () => {});
 });

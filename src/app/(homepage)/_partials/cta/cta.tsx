@@ -6,7 +6,11 @@ import background from "./_images/bg.jpg";
 export default function Cta() {
   return (
     <React.Fragment>
-      <Link href="/" className="flex__center mt-8">
+      <Link
+        href="https://www.detik.com/search/searchall?query=fun+run&siteid=2"
+        data-test="btn-cta"
+        className="flex__center mt-8"
+      >
         <button className="absolute btn primary">Lihat Lebih Banyak</button>
       </Link>
       <section className="flex__center mt-10">

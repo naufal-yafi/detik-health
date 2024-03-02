@@ -11,7 +11,7 @@ export default function Navigation() {
 
   return (
     <React.Fragment>
-      <div className="block md:hidden">
+      <div className="block md:hidden mt-5 md:mt-0">
         <button
           className="w-[40px] h-[40px] flex__center bg-white rounded-full"
           onClick={handleOpen}
